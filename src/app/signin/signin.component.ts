@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from './user.model';
 import { AuthService } from './auth.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-signin',
@@ -9,14 +10,15 @@ import { AuthService } from './auth.service';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  loginInProcess: boolean;
+  loginInProcess: any;
   email = new FormControl('', [Validators.required, Validators.email]);
   // crea un object
   signinForm: FormGroup;
   // hide para ocultar la contraseña
   hide = true;
+  error = '';
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, public snackBar: MatSnackBar) {
     this.loginInProcess = false;
    }
 
@@ -32,15 +34,31 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmit() {
+    this.loginInProcess = false;
     if (this.signinForm.valid) {
       this.loginInProcess = true;
       const { email, password } = this.signinForm.value;
       const user = new User(email, password);
       this.authService.signin(user)
-        .subscribe(
-          this.authService.login,
-          this.authService.handleError
-        );
+      .subscribe( result => {
+        if (result = true) {
+        // tslint:disable-next-line:no-unused-expression
+        this.authService.login;
+        } else {
+          this.error = 'Email o Contraseña incorrecta';
+          this.snackBar.open('Email o Contraseña incorrecta', '', {
+            duration: 2500
+          });
+          this.loginInProcess = false;
+        }
+      }, e => {
+        this.error = 'Credenciales incorrectas';
+        this.snackBar.open('Email o Contraseña incorrecta', '', {
+          duration: 2500,
+          extraClasses: ['success-snackbar']
+        });
+        this.loginInProcess = false;
+      });
     }
   }
 

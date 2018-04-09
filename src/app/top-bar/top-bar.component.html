@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <span [routerLink]="['/']">Domicilios Test</span>
     <span class="space"></span>
-    <button mat-raised-button *ngIf="!isLoggedIn()" [routerLink]="['signin']">
+    <button mat-button *ngIf="!isLoggedIn()" [routerLink]="['signin']">
       Iniciar sesión
     </button>
     <div *ngIf="isLoggedIn()">
