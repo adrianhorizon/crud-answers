@@ -1,0 +1,76 @@
+/// @author Adrian Caminos <camilod4568@gmail.com>
+@import '../../../src/sass/variables';
+.signup-view {
+  mat-card {
+    opacity: 0.8;
+    background: linear-gradient(-90deg, #c3c3c3, #ffffff, #d8d8d8);
+    filter: alpha(opacity=50);
+    @media(min-width: $layout-sm) {
+      min-width: 450px;
+      min-height: 290px;
+    }
+  }
+  .card-image {
+    background-image: url(../../assets/img/register.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  button {
+    width: 47%;
+    height: 36px;
+    color: white;
+    margin: 0 auto;
+  }
+  mat-grid-list {
+    background: linear-gradient(-90deg, #c3c3c3, #ffffff, #d8d8d8);
+    filter: alpha(opacity=50);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+  mat-card-title {
+    text-align: center;
+    font-size: 18px;
+    color: #cccccc;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 12px;
+    opacity: 100%;
+    font-weight: 500;
+    text-align: left;
+    text-align: center;
+    color: black;
+  }
+  a {
+    text-decoration: none;
+  }
+  /* unvisited link */
+  a:link {
+    color: #0aaac0;
+  }
+  /* mouse over link */
+  a:hover {
+    color: #00aaff;
+  }
+  /* selected link */
+  a:active {
+    color: #2199e0;
+  }
+}

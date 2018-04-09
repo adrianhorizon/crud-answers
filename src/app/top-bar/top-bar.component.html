@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span [routerLink]="['/']">Domicilios Test</span>
+    <span class="space"></span>
+    <button mat-raised-button *ngIf="!isLoggedIn()" [routerLink]="['signin']">
+      Iniciar sesión
+    </button>
+    <div *ngIf="isLoggedIn()">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>
+          <mat-icon>account_circle</mat-icon>
+          <small>{{ fullName() }} (Mi perfil)</small>
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <small>Cerrar Sesion</small>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

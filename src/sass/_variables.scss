@@ -1,0 +1,40 @@
+$sideBarWidth: 90px;
+$sideBarBg: #222D32;
+$muColor: #0aaac0;
+$borderColor: #c3c3c3;
+$appBg: white;
+$textColor: black;
+$yellowColor: #ffc64b;
+$greenColor: #3adb76;
+$background: #f3f3f3;
+
+// Breakpoints
+
+$layout-xs: 600px;
+$layout-sm: 960px;
+$layout-mat: 1280px;
+$layout-lg: 1920px;
+
+// Task states
+
+$task-created: #d8d8d8;
+$task-waiting: #DC8204;
+$task-assigned: #2199e0;
+$task-in-progress: #F6DC34;
+$task-ended: #26ae60;
+$task-cancelled: #ff584b;
+
+// Messenger states
+
+$messenger-blocked: #ff584b;
+$messenger-active: #26ae60;
+$messenger-preregistered: #ff9900;
+$messenger-disposed: #d8d8d8;
+
+// Alerts colors
+$red-alert: #da4f49;
+$yellow-alert: #FBB451;
+$purple-alert: #D358F7;
+$white-alert: white;
+$grey-alert: #CFCECE;
+$pink-alert: #F6CEF5;
