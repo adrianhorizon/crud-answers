@@ -1,11 +1,10 @@
-<p>hola</p>
-<div>
-  <mat-list>
-    <mat-list-item *ngFor="let question of questions" [routerLink]="['questions', question._id]">
-      <h3 mat-line>{{question.title}}</h3>
-      <p mat-line>
-        <small>{{question.answers.length}} respuestas</small>
-      </p>
-    </mat-list-item>
-  </mat-list>
-</div>
+<mat-card>
+<mat-list>
+  <mat-list-item *ngFor="let question of data" [routerLink]="['questions', question._id]">
+    <h3 mat-line>{{ question.user.name }}</h3>
+    <p mat-line>
+      <small>{{ question.text.length }} respuestas - {{ question.createdAt | amLocale: 'es' | amTimeAgo }}</small>
+    </p>
+  </mat-list-item>
+</mat-list>
+</mat-card>

@@ -1,3 +1,15 @@
-<p>
-  question-form works!
-</p>
+<mat-card>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <mat-card-header>
+      <mat-form-field floatLabel="never" class="full-width">
+        <textarea class="publicar" matInput ngModel name="description" placeholder="Escribe aqui tu estado"></textarea>
+      </mat-form-field>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div style="text-align: right;">
+        <button type="submit" mat-raised-button>Publicar</button>
+      </div>
+    </mat-card-content>
+  </form>
+</mat-card>

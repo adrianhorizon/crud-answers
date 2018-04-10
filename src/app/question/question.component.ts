@@ -23,11 +23,6 @@ export class QuestionComponent implements OnInit {
     .map(Response => Response)
     .catch(error => Observable.throw('error'))
     .subscribe(res => this.data = res);
-
-    return this.http.get(this.endpoint)
-    .subscribe(loco => {
-      console.log(loco);
-    });
   }
 
 

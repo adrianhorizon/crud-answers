@@ -12,10 +12,13 @@ import { HttpParams, HttpHeaders, HttpClient } from '@angular/common/http';
 @Injectable()
 export class QuestionService {
 
+  data: any;
+  endpoint: string;
   private questionsUrl: string;
 
   constructor(private http: HttpClient) {
     this.questionsUrl = environment.apiUrl + 'questions';
+    this.endpoint = environment.endPoint;
   }
 
   getQuestions(sort = '-createdAt'): Promise<void | Question[]> {
@@ -36,6 +39,12 @@ export class QuestionService {
   getToken() {
     const token = localStorage.getItem('token');
     return `?token=${token}`;
+  }
+
+  getEndpoint() {
+    return this.http.get(this.endpoint)
+      .catch(error => Observable.throw('error'))
+      .subscribe(res => this.data = res);
   }
 
   addQuestion(question: Question) {

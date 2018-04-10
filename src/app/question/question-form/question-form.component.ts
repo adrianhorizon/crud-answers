@@ -26,10 +26,8 @@ export class QuestionFormComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     const q = new Question(
-      form.value.title,
       form.value.description,
-      new Date(),
-      form.value.icon
+      new Date()
     );
     this.questionService.addQuestion(q)
       .subscribe(

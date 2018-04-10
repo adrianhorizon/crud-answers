@@ -1,4 +1,23 @@
-
-small {
-    display: block;
-}
+.publicar {
+    font-size: 15px;
+    color: #00C853;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  mat-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  mat-divider {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    text-align: right;
+    background-color: #00C853;
+  }

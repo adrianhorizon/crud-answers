@@ -7,7 +7,9 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 // Routing path, children routes
 import { Routing } from './app.routing';
+
 import { AuthService } from './signin/auth.service';
+import { QuestionService } from './question/question.service';
 
 import 'hammerjs';
 import { MomentModule } from 'angular2-moment';
@@ -23,7 +25,6 @@ import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question/question-detail/question-detail.component';
 import { QuestionFormComponent } from './question/question-form/question-form.component';
 import { QuestionListComponent } from './question/question-list/question-list.component';
-import { QuestionService } from './question/question.service';
 
 @NgModule({
   declarations: [

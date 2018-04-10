@@ -1,6 +1,41 @@
+@import '../../../src/sass/variables';
 .add-question {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    font-size: 24px;
-  }
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 24px;
+}
+
+.publicar {
+  font-size: 15px;
+  color: #00C853;
+}
+
+.full-width {
+  width: 100%;
+}
+.divider {
+  margin-top: 20px;
+}
+
+mat-card {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+mat-divider {
+  margin-bottom: 20px;
+}
+
+.divider-prin{
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+button {
+  text-align: right;
+  background-color: #00C853;
+}

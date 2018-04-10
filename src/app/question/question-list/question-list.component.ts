@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Question } from '../question.model';
 import { QuestionService } from '../question.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-question-list',
@@ -9,18 +12,27 @@ import { QuestionService } from '../question.service';
 })
 export class QuestionListComponent implements OnInit {
 
-  constructor(private questionService: QuestionService) {}
+  data: any;
+  endpoint: string;
+
+  constructor(private questionService: QuestionService, private http: HttpClient) {
+   }
 
   @Input() sort = '-createdAt';
   questions: Question[];
   loading = true;
 
   ngOnInit() {
-    this.questionService
+      this.questionService
       .getQuestions(this.sort)
       .then((questions: Question[]) => {
         this.questions = questions;
         this.loading = false;
+      });
+
+      return this.http.get(this.endpoint)
+      .subscribe(loco => {
+        console.log(loco);
       });
   }
 

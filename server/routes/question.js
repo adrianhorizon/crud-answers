@@ -28,9 +28,8 @@ app.get('/:id', questionMiddleware, async (req, res) => {
 
 // POST /api/questions
 app.post('/', required, async (req, res) => {
-  const { title, description, icon } = req.body
+  const { description, icon } = req.body
   const q = {
-    title,
     description,
     icon,
     user: req.user._id
