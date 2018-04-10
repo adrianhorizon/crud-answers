@@ -42,8 +42,10 @@ export class SigninComponent implements OnInit {
       this.authService.signin(user)
       .subscribe( result => {
         if (result = true) {
-        // tslint:disable-next-line:no-unused-expression
-        this.authService.login;
+          this.authService.signin(user)
+          .subscribe(
+            this.authService.login,
+          );
         } else {
           this.error = 'Email o Contraseña incorrecta';
           this.snackBar.open('Email o Contraseña incorrecta', '', {

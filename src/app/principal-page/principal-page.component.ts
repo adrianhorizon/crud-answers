@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-principal-page',
@@ -8,12 +7,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PrincipalPageComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor() {
+   }
 
   ngOnInit() {
-    return this.http.get('http://www.mocky.io/v2/5a663e0d2e0000002b323e0e').subscribe(data => {
-      console.log(data);
-    });
   }
 
 }

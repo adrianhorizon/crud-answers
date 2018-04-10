@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://evening-garden-95075.herokuapp.com/api/'
+  apiUrl: 'https://evening-garden-95075.herokuapp.com/api/',
+  endPoint: 'http://www.mocky.io/v2/5a663e0d2e0000002b323e0e'
 };
-
-// mongodb://heroku_jthz0kdk:kc38dj1dhv0m7j4sb15bl3gajg@ds135619.mlab.com:35619/heroku_jthz0kdk

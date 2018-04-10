@@ -10,6 +10,7 @@ import { Routing } from './app.routing';
 import { AuthService } from './signin/auth.service';
 
 import 'hammerjs';
+import { MomentModule } from 'angular2-moment';
 
 import { AppComponent } from './app.component';
 import { Page404Component } from './page404/page404.component';
@@ -17,7 +18,12 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { PrincipalPageComponent } from './principal-page/principal-page.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuestionComponent } from './question/question.component';
+import { AnswerComponent } from './answer/answer.component';
+import { QuestionDetailComponent } from './question/question-detail/question-detail.component';
+import { QuestionFormComponent } from './question/question-form/question-form.component';
+import { QuestionListComponent } from './question/question-list/question-list.component';
+import { QuestionService } from './question/question.service';
 
 @NgModule({
   declarations: [
@@ -27,12 +33,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PrincipalPageComponent,
     SigninComponent,
     SignupComponent,
-    DashboardComponent
+    QuestionComponent,
+    AnswerComponent,
+    QuestionDetailComponent,
+    QuestionFormComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MomentModule,
     FormsModule,
     ReactiveFormsModule,
     Routing,
@@ -40,7 +51,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    QuestionService
   ],
   bootstrap: [AppComponent]
 })

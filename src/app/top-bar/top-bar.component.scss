@@ -1,3 +1,4 @@
+@import '../../../src/sass/variables';
 .space {
     flex: 1 1 auto;
 }
@@ -7,3 +8,7 @@
     border-radius: 10px;
     color: black;
 }
+.header-image {
+    background-image: url('http://anime.es/wp-content/uploads/2013/05/Chi-s-sweet-home1.jpg');
+    background-size: cover;
+  }

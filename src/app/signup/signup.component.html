@@ -6,13 +6,13 @@
         <mat-card>
           <form novalidate [formGroup]="signupForm" (ngSubmit)="onSubmit()">
             <mat-form-field>
-              <input matInput placeholder="Nombre de Usuario" formControlName="userName" required>
-              <mat-error *ngIf="signupForm.invalid">{{getErrorMessage()}} usuario</mat-error>
+              <input matInput placeholder="Nombre y Apellido" formControlName="firstName" required>
+              <mat-error *ngIf="signupForm.invalid">{{getErrorMessage()}} nombre y apellido</mat-error>
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput placeholder="Nombre y Apellido" formControlName="firstName" required>
-              <mat-error *ngIf="signupForm.invalid">{{getErrorMessage()}} nombre y apellido</mat-error>
+              <input matInput placeholder="Nombre de Usuario" formControlName="userName" required>
+              <mat-error *ngIf="signupForm.invalid">{{getErrorMessage()}} usuario</mat-error>
             </mat-form-field>
 
             <mat-form-field>
