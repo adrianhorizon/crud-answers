@@ -1,11 +1,4 @@
 @import '../../../src/sass/variables';
-.add-question {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  font-size: 24px;
-}
-
 .publicar {
   font-size: 15px;
   color: #00C853;
@@ -16,9 +9,6 @@
 }
 .divider {
   margin-top: 20px;
-}
-
-mat-card {
   max-width: 600px;
   margin: 0 auto;
   width: 100%;

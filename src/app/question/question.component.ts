@@ -24,6 +24,4 @@ export class QuestionComponent implements OnInit {
     .catch(error => Observable.throw('error'))
     .subscribe(res => this.data = res);
   }
-
-
 }

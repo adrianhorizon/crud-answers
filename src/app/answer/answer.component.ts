@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../signin/auth.service';
-import { QuestionService } from '../question/question.service';
-import { Question } from '../question/question.model';
 import { NgForm } from '@angular/forms';
 import { Answer } from './answer.model';
+import { Question } from '../question/question.model';
+import { QuestionService } from '../question/question.service';
+import { AuthService } from '../signin/auth.service';
 
 @Component({
   selector: 'app-answer',

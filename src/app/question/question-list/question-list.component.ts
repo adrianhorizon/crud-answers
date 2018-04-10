@@ -16,6 +16,7 @@ export class QuestionListComponent implements OnInit {
   endpoint: string;
 
   constructor(private questionService: QuestionService, private http: HttpClient) {
+    this.endpoint = environment.endPoint;
    }
 
   @Input() sort = '-createdAt';
@@ -31,9 +32,8 @@ export class QuestionListComponent implements OnInit {
       });
 
       return this.http.get(this.endpoint)
-      .subscribe(loco => {
-        console.log(loco);
-      });
+      .catch(error => Observable.throw('error'))
+      .subscribe(res => this.data = res);
   }
 
 }

@@ -19,9 +19,6 @@ export class QuestionFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (!this.authService.isLoggedIn()) {
-      this.router.navigateByUrl('/signin');
-    }
   }
 
   onSubmit(form: NgForm) {

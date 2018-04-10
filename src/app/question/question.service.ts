@@ -41,12 +41,6 @@ export class QuestionService {
     return `?token=${token}`;
   }
 
-  getEndpoint() {
-    return this.http.get(this.endpoint)
-      .catch(error => Observable.throw('error'))
-      .subscribe(res => this.data = res);
-  }
-
   addQuestion(question: Question) {
     const body = JSON.stringify(question);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });

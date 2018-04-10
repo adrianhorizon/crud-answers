@@ -9,9 +9,8 @@
     </div>
   </mat-tab>
   <mat-tab label="Hot">
-    <app-question-list sort='-answers'></app-question-list>
+    <div class="divider">
+      <app-question-list sort='-answers'></app-question-list>
+    </div>
   </mat-tab>
 </mat-tab-group>
-<button [routerLink]="['questions/new']" mat-fab class="add-question" color="accent">
-  <mat-icon>add</mat-icon>
-</button>
