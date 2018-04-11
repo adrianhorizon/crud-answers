@@ -1,6 +1,12 @@
-# Sulferchemicalfront
+# Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+using angular 5, scss, webpack, nodejs, rxjs and mongoDB
+
+# Install
+
+-- npm install
+-- mongod
+-- npm start
 
 ## Development server
 

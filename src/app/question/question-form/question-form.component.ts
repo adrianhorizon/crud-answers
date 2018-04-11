@@ -22,6 +22,9 @@ export class QuestionFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    if (!this.authService.isLoggedIn()) {
+      this.router.navigateByUrl('/signin');
+    }
     const q = new Question(
       form.value.description,
       new Date()

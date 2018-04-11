@@ -5,12 +5,40 @@
   
   .full-width {
     width: 100%;
+    height: 46px;
+    border: none;
+    margin-bottom: 10px;
   }  
-  mat-divider {
+  .margin-divider{
     margin-bottom: 20px;
   }
-  
+  .button-div {
+    text-align: right !important;
+    margin-top: 10px !important;
+  }
+
+  mat-card-content {
+    margin-bottom: -10px;
+  }
+  mat-card-header {
+    margin-bottom: 0px;
+    margin-top: -15px;
+  }
   button {
     text-align: right;
+    color: #ffffff;
     background-color: #00C853;
   }
+
+  ::placeholder {
+    color: #00C853;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #00C853;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #00C853;
+}

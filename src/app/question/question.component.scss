@@ -8,23 +8,12 @@
   width: 100%;
 }
 .divider {
-  margin-top: 20px;
-  max-width: 600px;
+  margin-top: 20px !important;
   margin: 0 auto;
+  max-width: 600px;
   width: 100%;
 }
-
-mat-divider {
-  margin-bottom: 20px;
-}
-
-.divider-prin{
-  margin-bottom: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  width: 100%;
-}
-
+ 
 button {
   text-align: right;
   background-color: #00C853;

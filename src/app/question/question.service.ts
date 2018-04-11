@@ -13,12 +13,10 @@ import { HttpParams, HttpHeaders, HttpClient } from '@angular/common/http';
 export class QuestionService {
 
   data: any;
-  endpoint: string;
   private questionsUrl: string;
 
   constructor(private http: HttpClient) {
     this.questionsUrl = environment.apiUrl + 'questions';
-    this.endpoint = environment.endPoint;
   }
 
   getQuestions(sort = '-createdAt'): Promise<void | Question[]> {

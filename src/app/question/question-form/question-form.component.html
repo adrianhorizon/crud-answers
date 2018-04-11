@@ -1,13 +1,11 @@
 <mat-card>
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <mat-card-header>
-      <mat-form-field floatLabel="never" class="full-width">
-        <textarea class="publicar" matInput ngModel name="description" placeholder="Escribe aqui tu estado"></textarea>
-      </mat-form-field>
+      <input class="publicar full-width" name="description" placeholder="Escribe aqui tu estado" ngModel>
     </mat-card-header>
-    <mat-divider></mat-divider>
+    <mat-divider class="margin-divider"></mat-divider>
     <mat-card-content>
-      <div style="text-align: right;">
+      <div class="button-div">
         <button type="submit" mat-raised-button>Publicar</button>
       </div>
     </mat-card-content>
