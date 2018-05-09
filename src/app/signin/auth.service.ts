@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import urljoin from 'url-join';
 import { environment } from '../../environments/environment';
 import { User } from './user.model';
 import { UserNew } from '../signup/user-new.model';
