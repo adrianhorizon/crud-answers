@@ -1,7 +1,7 @@
 import Debug from 'debug'
 import { Question, Answer } from '../models'
 
-const debug = new Debug('testfront:db:question')
+const debug = new Debug('crud-answers:db-api:question')
 
 export default {
   findAll: (sort = '-createdAt') => {

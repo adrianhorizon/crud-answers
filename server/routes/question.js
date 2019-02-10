@@ -1,6 +1,6 @@
 import express from 'express'
 import { required, questionMiddleware } from '../middleware'
-import { question } from '../db'
+import { question } from '../db-api'
 import { handleError } from '../utils'
 import { User } from '../models'
 
@@ -28,8 +28,9 @@ app.get('/:id', questionMiddleware, async (req, res) => {
 
 // POST /api/questions
 app.post('/', required, async (req, res) => {
-  const { description, icon } = req.body
+  const { title, description, icon } = req.body
   const q = {
+    title,
     description,
     icon,
     user: req.user._id

@@ -9,7 +9,7 @@ import {
 } from 'bcryptjs'
 
 const app = express.Router()
-const debug = new Debug('testfront:auth')
+const debug = new Debug('crud-answers:auth')
 
 app.post('/signin', async (req, res, next) => {
   const { email, password } = req.body
@@ -31,18 +31,18 @@ app.post('/signin', async (req, res, next) => {
     token,
     userId: user._id,
     firstName: user.firstName,
-    userName: user.userName,
+    lastName: user.lastName,
     email: user.email
   })
 })
 
-const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 14400 })
+const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 86400 })
 
 app.post('/signup', async (req, res) => {
-  const { userName, firstName, email, password } = req.body
+  const { firstName, lastName, email, password } = req.body
   const u = new User({
-    userName,
     firstName,
+    lastName,
     email,
     password: hash(password, 10)
   })
@@ -54,7 +54,7 @@ app.post('/signup', async (req, res) => {
     token,
     userId: user._id,
     firstName,
-    userName,
+    lastName,
     email
   })
 })
